@@ -1,0 +1,50 @@
+/* Body */
+/* Scoreboard */
+.scoreboard-app {
+  margin-top: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  width: 700px;
+}
+.scoreboard-title {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+/* Players */
+.players-container {
+  border-top: 2px solid white;
+  background-color: cornflowerblue;
+  padding-right: 1px;
+  font-size: 3rem;
+}
+.player-score {
+  padding: 1rem;
+}
+
+.player-name+.player-counter {
+  padding: 5px;
+}
+.player-counter {
+  text-align: right;
+}
+.horizonal-rule {
+  border: 1px solid white;
+}
+.btn {
+  box-shadow: 0px 1px 6px 1px black;
+}
+/* Decrement Button */
+.btn-danger {
+   width: 4.6rem;
+}
+
+/* Stats Table */
+table.stats {
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+.table>tbody>.total-players-td-row>td {
+  border:none;
+}
