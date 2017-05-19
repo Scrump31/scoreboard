@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-
+import _ from 'lodash';
 import { Col } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { addNewPlayer } from '../actions';
 
-export default class AddPlayer extends Component {
+class AddPlayer extends Component {
   constructor(props) {
     super(props);
     this.state = { newPlayerName: '' };
-    this.addNewPlayer = this.addNewPlayer.bind(this);
+    this.createNewPlayer = this.createNewPlayer.bind(this);
   }
 
-  addNewPlayer(event) {
+  createNewPlayer(event) {
     event.preventDefault();
-    console.log(this.state.newPlayerName);
+    this.props.addNewPlayer(
+      {
+        name: this.state.newPlayerName,
+        score: 0,
+        id: _.uniqueId(),
+      },
+    );
+
+    this.setState({ newPlayerName: '' });
   }
 
   render() {
@@ -29,7 +40,7 @@ export default class AddPlayer extends Component {
               <span className="input-group-btn">
                 <button
                   className="btn btn-default"
-                  type="submit" onClick={this.addNewPlayer}
+                  type="submit" onClick={this.createNewPlayer}
                 >Add
                 </button>
               </span>
@@ -39,10 +50,13 @@ export default class AddPlayer extends Component {
       </Col>
     );
   }
-
 }
 
-// Player.propTypes = {
-//   name: React.PropTypes.string.isRequired,
-//   score: React.PropTypes.number,
-// }.isRequired;
+function mapDispatchToProps(dispatch) {
+  // Whenever selectBook is called, result should be passed to all reducers
+  return bindActionCreators({ addNewPlayer }, dispatch);
+}
+
+/* Promote BookList from a component to a container - it needs to know
+ about this new dispatch method, selectBook. Make it avaliable as a prop */
+export default connect(null, mapDispatchToProps)(AddPlayer);

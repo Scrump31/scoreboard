@@ -29,7 +29,7 @@ class App extends Component {
             <Player
               name={player.name}
               score={player.score}
-              key={player.name}
+              key={player.id}
             />)}
         </Row>
         <Row>

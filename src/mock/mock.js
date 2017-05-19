@@ -1,25 +1,21 @@
+import _ from 'lodash';
+
 const PLAYERS = [
   {
     name: 'Jim Hoskins',
     score: 31,
-    id: 1,
+    id: _.uniqueId(),
   },
   {
     name: 'Andrew Chalkley',
     score: 35,
-    id: 2,
+    id: _.uniqueId(),
   },
   {
     name: 'Alena Holligan',
     score: 42,
-    id: 3,
+    id: _.uniqueId(),
   },
 ];
-
-// const PLAYERS = {
-//   name: 'Jim Hoskins',
-//   score: 31,
-//   id: 1,
-// };
 
 export default PLAYERS;
