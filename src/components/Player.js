@@ -13,6 +13,7 @@ export default function Player(props) {
     </div>
   );
 }
+
 Player.propTypes = {
   name: React.PropTypes.string.isRequired,
   score: React.PropTypes.number,

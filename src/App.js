@@ -1,28 +1,20 @@
-// import React, { Component } from 'react';
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import Stats from './components/Stats';
 import Timer from './components/Timer';
 import Player from './components/Player';
-
+import AddPlayer from './components/AddPlayer';
 import './App.css';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { players: this.props.initialPlayers, score: 0 };
-  }
-  // getInitialState() {
-  //
-  // }
-
+class App extends Component {
   render() {
     return (
       <Grid className="scoreboard-app">
         <Row>
           <Col md={4} className="text-left stats">
             <Stats
-              totalPlayers={this.state.players.length}
+              totalPlayers={0}
               totalPoints={0}
             />
           </Col>
@@ -33,25 +25,37 @@ export default class App extends Component {
         </Row>
 
         <Row className="players-container">
-          {this.state.players.map(player =>
+          {this.props.players.map(player =>
             <Player
               name={player.name}
               score={player.score}
-              key={player.id}
+              key={player.name}
             />)}
+        </Row>
+        <Row>
+          <AddPlayer />
         </Row>
       </Grid>
     );
   }
 
 }
-App.propTypes = {
-  scoreboard: React.PropTypes.string,
-  initialPlayers: React.PropTypes.arrayOf(React.PropTypes.shape({
-    name: React.PropTypes.string,
-    score: React.PropTypes.number,
-  })).isRequired,
-};
+// App.propTypes = {
+//   scoreboard: React.PropTypes.string,
+//
+//   // initialPlayers: React.PropTypes.arrayOf(React.PropTypes.shape({
+//   //   name: React.PropTypes.string,
+//   //   score: React.PropTypes.number,
+//   // })).isRequired,
+// };
 App.defaultProps = {
   scoreboard: 'Scoreboard',
 };
+
+function mapStateToProps(state) {
+  return {
+    players: state.players,
+  };
+}
+
+export default connect(mapStateToProps)(App);
