@@ -53,10 +53,7 @@ class AddPlayer extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  // Whenever selectBook is called, result should be passed to all reducers
   return bindActionCreators({ addNewPlayer }, dispatch);
 }
 
-/* Promote BookList from a component to a container - it needs to know
- about this new dispatch method, selectBook. Make it avaliable as a prop */
 export default connect(null, mapDispatchToProps)(AddPlayer);

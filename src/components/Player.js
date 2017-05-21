@@ -7,7 +7,7 @@ export default function Player(props) {
     <div>
       <Col md={6} className="player-name"><div>{props.name}</div></Col>
       <Col md={6} className="player-counter">
-        <Counter score={props.score} />
+        <Counter id={props.id} score={props.score} />
       </Col>
       <Col md={12} className="horizonal-rule" />
     </div>

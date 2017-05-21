@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import Stats from './components/Stats';
 import Timer from './components/Timer';
 import Player from './components/Player';
@@ -14,8 +15,8 @@ class App extends Component {
         <Row>
           <Col md={4} className="text-left stats">
             <Stats
-              totalPlayers={0}
-              totalPoints={0}
+              totalPlayers={this.props.players.length}
+              totalPoints={_.sumBy(this.props.players, 'score')}
             />
           </Col>
           <Col md={5} className="scoreboard-title">
@@ -30,6 +31,7 @@ class App extends Component {
               name={player.name}
               score={player.score}
               key={player.id}
+              id={player.id}
             />)}
         </Row>
         <Row>
