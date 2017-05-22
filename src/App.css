@@ -31,6 +31,22 @@
 .player-counter {
   text-align: right;
 }
+.player-name:hover {
+  text-decoration: line-through;
+  text-decoration-color: #d9534f;
+  -moz-text-decoration-color: #d9534f;
+  cursor: pointer;
+}
+.player-name:hover .glyphicon-remove {
+  visibility: visible;
+}
+ .glyphicon-remove {
+  visibility: hidden;
+  padding-left: 5px;
+  font-size: 0.9em;
+  color: #d9534f;
+}
+
 .horizonal-rule {
   border: 1px solid white;
 }
@@ -54,4 +70,25 @@
 /* Add Player */
 form {
   margin-top: 1.5%;
+}
+
+/* Timer */
+.progress {
+  margin-bottom: 1rem;
+  border: 1px solid #fff;
+}
+.progress span {
+  background: #000;
+
+  height: 100%;
+  float: right;
+}
+.time {
+  font-size: 2rem;
+}
+.controls {
+  padding-bottom: 1rem;
+}
+.pause {
+  margin: 0 1rem;
 }

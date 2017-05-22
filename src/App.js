@@ -3,8 +3,8 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import Stats from './components/Stats';
-import Timer from './components/Timer';
 import Player from './components/Player';
+import BasicTimrExample from './components/Timer';
 import AddPlayer from './components/AddPlayer';
 import './App.css';
 
@@ -19,10 +19,12 @@ class App extends Component {
               totalPoints={_.sumBy(this.props.players, 'score')}
             />
           </Col>
-          <Col md={5} className="scoreboard-title">
+          <Col md={4} className="scoreboard-title">
             {this.props.scoreboard}
           </Col>
-          <Col md={3} className="text-right timer"><Timer /></Col>
+          <Col md={4} className="text-center timer">
+            <BasicTimrExample />
+          </Col>
         </Row>
 
         <Row className="players-container">
