@@ -58,6 +58,27 @@
    width: 4.6rem;
 }
 
+/* Player Transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+/* end state of animation */
+.fade-enter-active {
+  opacity: 1;
+  transition: 0.5s ease-in all;
+}
+
+.fade-leave {
+  opacity: 1
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: 1s ease-out all;
+}
+
+
 /* Stats Table */
 .stats {
   font-size: 2rem;

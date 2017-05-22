@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Stats from './components/Stats';
 import Player from './components/Player';
 import BasicTimrExample from './components/Timer';
@@ -26,15 +27,23 @@ class App extends Component {
             <BasicTimrExample />
           </Col>
         </Row>
-
         <Row className="players-container">
-          {this.props.players.map(player =>
-            <Player
-              name={player.name}
-              score={player.score}
-              key={player.id}
-              id={player.id}
-            />)}
+          <ReactCSSTransitionGroup
+            transitionName={'fade'}
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+
+            {this.props.players.map(player =>
+              <Player
+                name={player.name}
+                score={player.score}
+                key={player.id}
+                id={player.id}
+              />,
+            )}
+          </ReactCSSTransitionGroup>
+
         </Row>
         <Row>
           <AddPlayer />
