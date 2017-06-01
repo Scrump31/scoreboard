@@ -2,17 +2,17 @@ import _ from 'lodash';
 
 const PLAYERS = [
   {
-    name: 'Jim Hoskins',
+    name: 'Player One',
     score: 31,
     id: _.uniqueId(),
   },
   {
-    name: 'Andrew Chalkley',
+    name: 'Player Two',
     score: 35,
     id: _.uniqueId(),
   },
   {
-    name: 'Alena Holligan',
+    name: 'Player Three',
     score: 42,
     id: _.uniqueId(),
   },
