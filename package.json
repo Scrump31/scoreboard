@@ -2,7 +2,7 @@
   "name": "react-scoreboard",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://scrump31/github.io/scoreboard",
+  "homepage" : "https://scrump31.github.io/scoreboard/",
   "devDependencies": {
     "enzyme": "^2.7.1",
     "eslint": "^3.13.1",
