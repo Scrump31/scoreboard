@@ -1,4 +1,4 @@
-#Scoreboard Web App
+# Scoreboard Web App
 ----
 This project includes a scoreboard that users can add and delete players as they please.
 In addition to adding/removing players, the total score of all players is dynamically added together based on updated scores.
@@ -6,7 +6,7 @@ The scoreboard has a 1 minute countdown timer that can be used to keep track of 
 
 The project includes many great features of react & redux such as transitions and redux-form validation.  
 
-###Technologies used:
+### Technologies used:
 * [Create React App](https://github.com/facebookincubator/create-react-app).
 * [Redux](http://redux.js.org/)
 * [ReactStrap](https://reactstrap.github.io/)
@@ -14,4 +14,4 @@ The project includes many great features of react & redux such as transitions an
 * [Timrjs](https://github.com/joesmith100/timrjs)
 
 ----
-###Checkout the [demo](https://scrump31.github.io/scoreboard/)
+### Checkout the [demo](https://scrump31.github.io/scoreboard/)
