@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Stats from './components/Stats';
-import Player from './components/Player';
+import Player from './containers/Player';
 import BasicTimrExample from './components/Timer';
-import AddPlayer from './components/AddPlayer';
+import AddPlayer from './containers/AddPlayer';
 import './App.css';
 
 class App extends Component {

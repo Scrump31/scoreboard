@@ -3,11 +3,22 @@ import _ from 'lodash';
 import { Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Field, reduxForm } from 'redux-form';
-import { reset } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import { addNewPlayer } from '../actions';
 
 class AddPlayer extends Component {
+
+  createNewPlayer(values) {
+    const { dispatch } = this.props;
+    this.props.addNewPlayer(
+      {
+        name: values.playerName,
+        score: 0,
+        id: _.uniqueId(),
+      },
+    );
+    return dispatch(reset('AddPlayerForm'));
+  }
 
   renderPlayerNameField(field) {
     const { meta: { invalid, error, touched } } = field;
@@ -34,19 +45,6 @@ class AddPlayer extends Component {
       </div>
     );
   }
-
-  createNewPlayer(values) {
-    const { dispatch } = this.props;
-    this.props.addNewPlayer(
-      {
-        name: values.playerName,
-        score: 0,
-        id: _.uniqueId(),
-      },
-    );
-    return dispatch(reset('AddPlayerForm'));
-  }
-
   render() {
     const { handleSubmit } = this.props;
     return (
