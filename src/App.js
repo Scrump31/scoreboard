@@ -5,7 +5,7 @@ import _ from 'lodash';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Stats from './components/Stats';
 import Player from './containers/Player';
-import BasicTimrExample from './components/Timer';
+import Timer from './components/Timer';
 import AddPlayer from './containers/AddPlayer';
 import './App.css';
 
@@ -23,9 +23,11 @@ class App extends Component {
           <Col md={4} className="scoreboard-title">
             {this.props.scoreboard}
           </Col>
+
           <Col md={4} className="text-center timer">
-            <BasicTimrExample />
+            <Timer />
           </Col>
+
         </Row>
         <Row className="players-container">
           <ReactCSSTransitionGroup
@@ -35,12 +37,12 @@ class App extends Component {
           >
 
             {this.props.players.map(player =>
-              <Player
+              (<Player
                 name={player.name}
                 score={player.score}
                 key={player.id}
                 id={player.id}
-              />,
+              />),
             )}
           </ReactCSSTransitionGroup>
 

@@ -13,18 +13,18 @@ export default class BasicTimrExample extends Component {
 
   componentDidMount() {
     this.timer = Timr('00:60')
-       .ticker(({ formattedTime, percentDone }) => {
-         this.setState({
-           time: formattedTime,
-           progress: `${percentDone}%`,
-         });
-       })
-       .onStop((self) => {
-         this.setState({
-           time: self.getFt(),
-           progress: '0%',
-         });
-       });
+      .ticker(({ formattedTime, percentDone }) => {
+        this.setState({
+          time: formattedTime,
+          progress: `${percentDone}%`,
+        });
+      })
+      .onStop((self) => {
+        this.setState({
+          time: self.getFt(),
+          progress: '0%',
+        });
+      });
   }
 
   render() {
@@ -39,20 +39,20 @@ export default class BasicTimrExample extends Component {
             onClick={() => this.timer.start()}
             className="start btn btn-sm btn-success"
           >
-                  Start
-               </button>
+            Start
+          </button>
           <button
             onClick={() => this.timer.pause()}
             className="pause btn btn-sm btn-default"
           >
-                  Pause
-               </button>
+            Pause
+          </button>
           <button
             onClick={() => this.timer.stop()}
             className="stop btn btn-sm btn-danger"
           >
-                  Stop
-               </button>
+            Stop
+          </button>
         </div>
       </div>
     );
