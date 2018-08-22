@@ -1,34 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import { Table } from 'react-bootstrap';
 
-const Stats = ({ totalPlayers, totalPoints }) => (
+const Stats = ({ players }) => (
   <Table className="stats">
     <tbody>
       <tr className="total-players-td-row">
         <td>
           <strong>Players:</strong>
         </td>
-        <td>{totalPlayers}</td>
+        <td>{players.length}</td>
       </tr>
       <tr>
         <td>
           <strong>Total Points:</strong>
         </td>
-        <td>{totalPoints}</td>
+        <td>{_.sumBy(players, 'score')}</td>
       </tr>
     </tbody>
   </Table>
 );
 
 Stats.propTypes = {
-  totalPlayers: React.PropTypes.number,
-  totalPoints: React.PropTypes.number,
-};
-Stats.defaultProps = {
-  totalPlayers: 0,
-  totalPoints: 0,
+  players: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = ({ players }) => ({ players });
