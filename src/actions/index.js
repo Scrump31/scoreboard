@@ -8,10 +8,10 @@ export const addNewPlayer = player => ({
 });
 export default addNewPlayer;
 
-export const updatePlayerScore = score => ({
+export const updatePlayerScore = (newScore, id) => ({
   type: UPDATE_PLAYER_SCORE,
-  id: score.id,
-  payload: score.newScore,
+  id,
+  newScore,
 });
 
 export const removePlayer = playerId => ({
