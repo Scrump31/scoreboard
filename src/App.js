@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Stats from './containers/Stats';
 import PlayerList from './containers/PlayerList';
 import Timer from './components/Timer';
@@ -10,29 +9,27 @@ import './App.css';
 const App = () => (
   <Grid className="scoreboard-app">
     <Row>
-      <Col md={4} className="text-left stats">
+      <Col xs={6} sm={4} className="text-left stats">
         <Stats />
       </Col>
-      <Col md={4} className="scoreboard-title">
+      <Col xs={6} sm={4} className="scoreboard-title">
         Scoreboard
       </Col>
-      <Col md={4} className="text-center timer">
+      <Col xs={12} sm={4} className="text-center timer">
         <Timer />
       </Col>
     </Row>
 
     <Row className="players-container">
-      <ReactCSSTransitionGroup
-        transitionName={'fade'}
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={500}
-      >
+      <Col xs={12}>
         <PlayerList />
-      </ReactCSSTransitionGroup>
+      </Col>
     </Row>
 
     <Row>
-      <AddPlayer />
+      <Col xs={12}>
+        <AddPlayer />
+      </Col>
     </Row>
   </Grid>
 );
