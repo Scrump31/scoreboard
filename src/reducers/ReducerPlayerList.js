@@ -7,17 +7,8 @@ export const ReducerPlayerList = (state = PLAYERS, action) => {
     case ADD_NEW_PLAYER:
       return [...state, action.payload]; // { current players, A new player }
     case UPDATE_PLAYER_SCORE:
-      {
-        const updatedItems = state.map((player) => {
-          if (player.id === action.id) {
-            return { ...player, score: action.payload }; // { player.score = newScore }
-          }
-
-          return player;
-        });
-        // console.log(updatedItems);
-        return updatedItems;
-      }
+      return state.map(player =>
+        (player.id === action.id ? { ...player, score: action.newScore } : player));
 
     case REMOVE_PLAYER:
       return state.filter(element => element.id !== action.payload);
