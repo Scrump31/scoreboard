@@ -6,9 +6,12 @@ import Counter from '../containers/Counter';
 const Player = ({ removePlayer, name, score, id }) => (
   <div>
     <Col md={6} className="player-name">
-      <div onClick={() => removePlayer(id)}>
+      <div>
         {name}
-        <span className="deletePlayer glyphicon glyphicon-remove" />
+        <button
+          onClick={() => removePlayer(id)}
+          className="glyphicon glyphicon-remove"
+        />
       </div>
     </Col>
     <Col md={6} className="player-counter">
@@ -24,5 +27,3 @@ Player.propTypes = {
 }.isRequired;
 
 export default Player;
-
-// TODO: change onClick div to a button tag
