@@ -1,82 +1,67 @@
 import React, { Component } from 'react';
+import { FormGroup, FormControl, InputGroup, Button } from 'react-bootstrap';
+
 import _ from 'lodash';
-import { Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { Field, reduxForm, reset } from 'redux-form';
 import { addNewPlayer } from '../actions';
 
 class AddPlayer extends Component {
-
-  createNewPlayer(values) {
-    const { dispatch } = this.props;
-    this.props.addNewPlayer(
-      {
-        name: values.playerName,
-        score: 0,
-        id: _.uniqueId(),
-      },
-    );
-    return dispatch(reset('AddPlayerForm'));
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      value: '',
+    };
   }
+  handleChange = e => this.setState({ value: e.target.value });
 
-  renderPlayerNameField(field) {
-    const { meta: { invalid, error, touched } } = field;
-    return (
-      <div className="form-group">
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Add a new player..."
-            {...field.input}
-          />
-          <span className="input-group-btn">
-            <button
-              className="btn btn-default"
-              type="submit"
-            >Add
-          </button>
-          </span>
-        </div>
-        <div className="playerValidate">
-          { touched && invalid ? error : '' }
-        </div>
-      </div>
-    );
-  }
+  generatePlayer = () => {
+    this.props.createPlayer({
+      id: _.uniqueId(),
+      name: this.state.value,
+      score: 0,
+    });
+    this.setState({ value: '' });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    if (this.state.value) {
+      this.generatePlayer();
+    } else {
+      return null;
+    }
+  };
   render() {
-    const { handleSubmit } = this.props;
     return (
-      <Col md={12}>
-        <form onSubmit={handleSubmit(this.createNewPlayer.bind(this))}>
-          <Field
-            name="playerName"
-            component={this.renderPlayerNameField}
-          />
-        </form>
-      </Col>
+      <form onSubmit={this.handleSubmit}>
+        <FormGroup>
+          <InputGroup>
+            <FormControl
+              type="text"
+              value={this.state.value}
+              placeholder="Add a new player..."
+              onChange={this.handleChange}
+            />
+            <InputGroup.Button>
+              <Button type="submit">Add</Button>
+            </InputGroup.Button>
+          </InputGroup>
+        </FormGroup>
+      </form>
     );
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addNewPlayer }, dispatch);
-}
+const mapDispatchToProps = dispatch => ({
+  createPlayer: player => dispatch(addNewPlayer(player)),
+});
 
-function validate(values) {
-  const errors = {};
+AddPlayer.propTypes = {
+  createPlayer: PropTypes.func.isRequired,
+};
 
-  if (!values.playerName) {
-    errors.playerName = 'Please Enter A Player Name';
-  }
-
-  return errors;
-}
-
-export default reduxForm({
-  validate,
-  form: 'AddPlayerForm',
-})(
-  connect(null, mapDispatchToProps)(AddPlayer),
-);
+export default connect(
+  null,
+  mapDispatchToProps
+)(AddPlayer);

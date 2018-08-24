@@ -23,9 +23,7 @@
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.5",
-    "reactstrap": "^4.5.0",
     "redux": "^3.6.0",
-    "redux-form": "^6.7.0",
     "timrjs": "^1.0.1"
   },
   "scripts": {
