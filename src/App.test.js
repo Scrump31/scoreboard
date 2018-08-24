@@ -1,10 +1,6 @@
-/* global document, it, expect, describe, mount :true*/
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-// import sinon from 'sinon';
 import App from './App';
 import PLAYERS from './mock/mock';
 
