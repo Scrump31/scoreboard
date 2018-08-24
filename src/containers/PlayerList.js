@@ -1,24 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { removePlayer, updatePlayerScore } from '../actions';
 
 import Player from '../components/Player';
 
 const PlayerList = ({ players, deletePlayer, updateScore }) => (
   <div>
-    {players.map(player => (
-
-      <Player
-        name={player.name}
-        score={player.score}
-        key={player.id}
-        id={player.id}
-        deletePlayer={deletePlayer}
-        updateScore={updateScore}
-      />
-
-    ))}
+    <ReactCSSTransitionGroup
+      transitionName={'fade'}
+      transitionEnterTimeout={500}
+      transitionLeaveTimeout={500}
+    >
+      {players.map(player => (
+        <Player
+          name={player.name}
+          score={player.score}
+          key={player.id}
+          id={player.id}
+          deletePlayer={deletePlayer}
+          updateScore={updateScore}
+        />
+      ))}
+    </ReactCSSTransitionGroup>
   </div>
 );
 const mapDispatchToProps = dispatch => ({

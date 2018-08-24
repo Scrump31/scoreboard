@@ -43,6 +43,13 @@
 .player-name:hover .glyphicon-remove {
   visibility: visible;
 }
+
+@media only screen and (max-width: 991px) {
+    /* For mobile devices: */
+    .player-name .glyphicon-remove {
+      visibility: visible;
+    }
+  }
  .glyphicon-remove {
   visibility: hidden;
   padding-left: 5px;
