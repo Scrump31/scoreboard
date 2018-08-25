@@ -15,7 +15,7 @@
   .scoreboard-title {
     text-align: right;
   }
- }
+}
 
 /* Players */
 .players-container {
@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.player-name+.player-counter {
+.player-name + .player-counter {
   padding: 5px;
 }
 .player-counter {
@@ -45,12 +45,12 @@
 }
 
 @media only screen and (max-width: 991px) {
-    /* For mobile devices: */
-    .player-name .glyphicon-remove {
-      visibility: visible;
-    }
+  /* For mobile devices: */
+  .player-name .glyphicon-remove {
+    visibility: visible;
   }
- .glyphicon-remove {
+}
+.glyphicon-remove {
   visibility: hidden;
   padding-left: 5px;
   font-size: 0.9em;
@@ -67,7 +67,7 @@
 }
 /* Decrement Button */
 .btn-danger {
-   width: 4.6rem;
+  width: 4.6rem;
 }
 
 /* Player Transitions */
@@ -81,23 +81,24 @@
   transition: 0.5s ease-in all;
 }
 
-.fade-leave {
-  opacity: 1
+.fade-exit {
+  opacity: 1;
 }
-
-.fade-leave-active {
+.fade-exit-active {
   opacity: 0;
-  transition: 1s ease-out all;
+  transition: 0.5s ease-out all;
 }
-
+.fade-done-exit {
+  display: none;
+}
 
 /* Stats Table */
 .stats {
   font-size: 2rem;
   margin-bottom: 0;
 }
-.table>tbody>.total-players-td-row>td {
-  border:none;
+.table > tbody > .total-players-td-row > td {
+  border: none;
 }
 
 /* Add Player */
