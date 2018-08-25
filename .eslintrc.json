@@ -1,16 +1,8 @@
 {
-    "extends": "airbnb",
-    "installedESLint": true,
-    "env": {
-        "browser": true,
-        "jest": true
-    },
-    "rules": {
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-    },
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ]
+  "extends": "react-app",
+  "rules": {
+    "prefer-const": "error",
+    "spaced-comment": "warn",
+    "prefer-arrow-callback": "error"
+  }
 }
