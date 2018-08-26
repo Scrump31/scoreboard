@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Stats from './containers/Stats';
-import PlayerList from './containers/PlayerList';
-import Timer from './components/Timer';
-import AddPlayer from './containers/AddPlayer';
+import Stats from '../containers/Stats';
+import PlayerList from '../containers/PlayerList';
+import Timer from '../components/Timer';
+import AddPlayer from '../containers/AddPlayer';
 import './App.css';
 
 const App = () => (

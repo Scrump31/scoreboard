@@ -16,6 +16,7 @@
     "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.5",
+    "react-test-renderer": "^16.4.2",
     "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "timrjs": "^1.0.1"
