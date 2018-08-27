@@ -22,7 +22,7 @@ const Counter = ({ id, score, updateScore }) => {
 Counter.propTypes = {
   id: PropTypes.number,
   score: PropTypes.number,
-  updatePlayerScore: PropTypes.func.isRequired,
+  updateScore: PropTypes.func.isRequired,
 }.isRequired;
 
 export default Counter;
