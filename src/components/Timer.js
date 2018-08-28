@@ -19,7 +19,7 @@ export default class BasicTimrExample extends Component {
           progress: `${percentDone}%`,
         });
       })
-      .onStop((self) => {
+      .onStop(self => {
         this.setState({
           time: self.getFt(),
           progress: '0%',

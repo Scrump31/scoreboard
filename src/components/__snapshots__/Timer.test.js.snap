@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Timer /> renders without crashing 1`] = `
+<div>
+  <div
+    className="time"
+  >
+    1:00
+  </div>
+  <div
+    className="progress"
+  >
+    <span
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="controls"
+  >
+    <button
+      className="start btn btn-sm btn-success"
+      onClick={[Function]}
+    >
+      Start
+    </button>
+    <button
+      className="pause btn btn-sm btn-default"
+      onClick={[Function]}
+    >
+      Pause
+    </button>
+    <button
+      className="stop btn btn-sm btn-danger"
+      onClick={[Function]}
+    >
+      Stop
+    </button>
+  </div>
+</div>
+`;
