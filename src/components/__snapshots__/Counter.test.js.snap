@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> renders without crashing 1`] = `
+<div>
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsSize="large"
+    bsStyle="danger"
+    disabled={false}
+    onClick={[Function]}
+  >
+    -
+  </Button>
+  <span
+    className="player-score"
+  />
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsSize="large"
+    bsStyle="success"
+    disabled={false}
+    onClick={[Function]}
+  >
+    +
+  </Button>
+</div>
+`;
