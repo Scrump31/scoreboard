@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders without crashing 1`] = `
+<Grid
+  bsClass="container"
+  className="scoreboard-app"
+  componentClass="div"
+  fluid={false}
+>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      className="text-left stats"
+      componentClass="div"
+      sm={4}
+      xs={6}
+    >
+      <Connect(Stats) />
+    </Col>
+    <Col
+      bsClass="col"
+      className="scoreboard-title"
+      componentClass="div"
+      sm={4}
+      xs={6}
+    >
+      Scoreboard
+    </Col>
+    <Col
+      bsClass="col"
+      className="text-center timer"
+      componentClass="div"
+      sm={4}
+      xs={12}
+    >
+      <BasicTimrExample />
+    </Col>
+  </Row>
+  <Row
+    bsClass="row"
+    className="players-container"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={12}
+    >
+      <Connect(PlayerList) />
+    </Col>
+  </Row>
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={12}
+    >
+      <Connect(AddPlayer) />
+    </Col>
+  </Row>
+</Grid>
+`;
