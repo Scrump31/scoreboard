@@ -6,13 +6,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNewPlayer } from '../actions';
 
-class AddPlayer extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      value: '',
-    };
-  }
+export class AddPlayer extends Component {
+  state = {
+    value: '',
+  };
+
   handleChange = e => this.setState({ value: e.target.value });
 
   generatePlayer = () => {
@@ -63,5 +61,5 @@ AddPlayer.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AddPlayer);
