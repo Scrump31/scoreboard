@@ -6,23 +6,21 @@ import { removePlayer, updatePlayerScore } from '../actions';
 
 import Player from '../components/Player';
 
-const PlayerList = ({ players, deletePlayer, updateScore }) => (
-  <div>
-    <TransitionGroup>
-      {players.map(player => (
-        <CSSTransition key={player.id} timeout={500} classNames="fade">
-          <Player
-            name={player.name}
-            score={player.score}
-            key={player.id}
-            id={player.id}
-            deletePlayer={deletePlayer}
-            updateScore={updateScore}
-          />
-        </CSSTransition>
-      ))}
-    </TransitionGroup>
-  </div>
+export const PlayerList = ({ players, deletePlayer, updateScore }) => (
+  <TransitionGroup>
+    {players.map(player => (
+      <CSSTransition key={player.id} timeout={500} classNames="fade">
+        <Player
+          name={player.name}
+          score={player.score}
+          key={player.id}
+          id={player.id}
+          deletePlayer={deletePlayer}
+          updateScore={updateScore}
+        />
+      </CSSTransition>
+    ))}
+  </TransitionGroup>
 );
 const mapDispatchToProps = dispatch => ({
   deletePlayer: id => dispatch(removePlayer(id)),

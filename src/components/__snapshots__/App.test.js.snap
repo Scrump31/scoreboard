@@ -190,8 +190,8 @@ exports[`<App /> renders without crashing 1`] = `
                 <div
                   className="col-xs-12"
                 >
-                  <Connect(PlayerList)>
-                    <PlayerList
+                  <Connect(Component)>
+                    <Component
                       deletePlayer={[Function]}
                       players={
                         Array [
@@ -214,407 +214,405 @@ exports[`<App /> renders without crashing 1`] = `
                       }
                       updateScore={[Function]}
                     >
-                      <div>
-                        <TransitionGroup
-                          childFactory={[Function]}
-                          component="div"
-                        >
-                          <div>
-                            <CSSTransition
-                              classNames="fade"
+                      <TransitionGroup
+                        childFactory={[Function]}
+                        component="div"
+                      >
+                        <div>
+                          <CSSTransition
+                            classNames="fade"
+                            in={true}
+                            key=".$1"
+                            onExited={[Function]}
+                            timeout={500}
+                          >
+                            <Transition
+                              appear={false}
+                              enter={true}
+                              exit={true}
                               in={true}
-                              key=".$1"
+                              mountOnEnter={false}
+                              onEnter={[Function]}
+                              onEntered={[Function]}
+                              onEntering={[Function]}
+                              onExit={[Function]}
                               onExited={[Function]}
+                              onExiting={[Function]}
                               timeout={500}
+                              unmountOnExit={false}
                             >
-                              <Transition
-                                appear={false}
-                                enter={true}
-                                exit={true}
-                                in={true}
-                                mountOnEnter={false}
-                                onEnter={[Function]}
-                                onEntered={[Function]}
-                                onEntering={[Function]}
-                                onExit={[Function]}
-                                onExited={[Function]}
-                                onExiting={[Function]}
-                                timeout={500}
-                                unmountOnExit={false}
+                              <Player
+                                deletePlayer={[Function]}
+                                id="1"
+                                key="1"
+                                name="Player One"
+                                score={31}
+                                updateScore={[Function]}
                               >
-                                <Player
-                                  deletePlayer={[Function]}
-                                  id="1"
-                                  key="1"
-                                  name="Player One"
-                                  score={31}
-                                  updateScore={[Function]}
+                                <Row
+                                  bsClass="row"
+                                  componentClass="div"
                                 >
-                                  <Row
-                                    bsClass="row"
-                                    componentClass="div"
+                                  <div
+                                    className="row"
                                   >
-                                    <div
-                                      className="row"
+                                    <Col
+                                      bsClass="col"
+                                      className="player-name"
+                                      componentClass="div"
+                                      xs={9}
                                     >
-                                      <Col
-                                        bsClass="col"
-                                        className="player-name"
-                                        componentClass="div"
-                                        xs={9}
+                                      <div
+                                        className="player-name col-xs-9"
                                       >
-                                        <div
-                                          className="player-name col-xs-9"
+                                        <div>
+                                          Player One
+                                          <button
+                                            className="glyphicon glyphicon-remove"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="player-counter"
+                                      componentClass="div"
+                                      xs={3}
+                                    >
+                                      <div
+                                        className="player-counter col-xs-3"
+                                      >
+                                        <Counter
+                                          id="1"
+                                          score={31}
+                                          updateScore={[Function]}
                                         >
                                           <div>
-                                            Player One
-                                            <button
-                                              className="glyphicon glyphicon-remove"
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="danger"
+                                              disabled={false}
                                               onClick={[Function]}
-                                            />
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-danger"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                -
+                                              </button>
+                                            </Button>
+                                            <span
+                                              className="player-score"
+                                            >
+                                              31
+                                            </span>
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="success"
+                                              disabled={false}
+                                              onClick={[Function]}
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-success"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                +
+                                              </button>
+                                            </Button>
                                           </div>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="player-counter"
-                                        componentClass="div"
-                                        xs={3}
-                                      >
-                                        <div
-                                          className="player-counter col-xs-3"
-                                        >
-                                          <Counter
-                                            id="1"
-                                            score={31}
-                                            updateScore={[Function]}
-                                          >
-                                            <div>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="danger"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-danger"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  -
-                                                </button>
-                                              </Button>
-                                              <span
-                                                className="player-score"
-                                              >
-                                                31
-                                              </span>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="success"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-success"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  +
-                                                </button>
-                                              </Button>
-                                            </div>
-                                          </Counter>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="horizonal-rule"
-                                        componentClass="div"
-                                        md={12}
-                                      >
-                                        <div
-                                          className="horizonal-rule col-md-12"
-                                        />
-                                      </Col>
-                                    </div>
-                                  </Row>
-                                </Player>
-                              </Transition>
-                            </CSSTransition>
-                            <CSSTransition
-                              classNames="fade"
-                              in={true}
-                              key=".$2"
-                              onExited={[Function]}
-                              timeout={500}
-                            >
-                              <Transition
-                                appear={false}
-                                enter={true}
-                                exit={true}
-                                in={true}
-                                mountOnEnter={false}
-                                onEnter={[Function]}
-                                onEntered={[Function]}
-                                onEntering={[Function]}
-                                onExit={[Function]}
-                                onExited={[Function]}
-                                onExiting={[Function]}
-                                timeout={500}
-                                unmountOnExit={false}
-                              >
-                                <Player
-                                  deletePlayer={[Function]}
-                                  id="2"
-                                  key="2"
-                                  name="Player Two"
-                                  score={35}
-                                  updateScore={[Function]}
-                                >
-                                  <Row
-                                    bsClass="row"
-                                    componentClass="div"
-                                  >
-                                    <div
-                                      className="row"
+                                        </Counter>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="horizonal-rule"
+                                      componentClass="div"
+                                      md={12}
                                     >
-                                      <Col
-                                        bsClass="col"
-                                        className="player-name"
-                                        componentClass="div"
-                                        xs={9}
+                                      <div
+                                        className="horizonal-rule col-md-12"
+                                      />
+                                    </Col>
+                                  </div>
+                                </Row>
+                              </Player>
+                            </Transition>
+                          </CSSTransition>
+                          <CSSTransition
+                            classNames="fade"
+                            in={true}
+                            key=".$2"
+                            onExited={[Function]}
+                            timeout={500}
+                          >
+                            <Transition
+                              appear={false}
+                              enter={true}
+                              exit={true}
+                              in={true}
+                              mountOnEnter={false}
+                              onEnter={[Function]}
+                              onEntered={[Function]}
+                              onEntering={[Function]}
+                              onExit={[Function]}
+                              onExited={[Function]}
+                              onExiting={[Function]}
+                              timeout={500}
+                              unmountOnExit={false}
+                            >
+                              <Player
+                                deletePlayer={[Function]}
+                                id="2"
+                                key="2"
+                                name="Player Two"
+                                score={35}
+                                updateScore={[Function]}
+                              >
+                                <Row
+                                  bsClass="row"
+                                  componentClass="div"
+                                >
+                                  <div
+                                    className="row"
+                                  >
+                                    <Col
+                                      bsClass="col"
+                                      className="player-name"
+                                      componentClass="div"
+                                      xs={9}
+                                    >
+                                      <div
+                                        className="player-name col-xs-9"
                                       >
-                                        <div
-                                          className="player-name col-xs-9"
+                                        <div>
+                                          Player Two
+                                          <button
+                                            className="glyphicon glyphicon-remove"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="player-counter"
+                                      componentClass="div"
+                                      xs={3}
+                                    >
+                                      <div
+                                        className="player-counter col-xs-3"
+                                      >
+                                        <Counter
+                                          id="2"
+                                          score={35}
+                                          updateScore={[Function]}
                                         >
                                           <div>
-                                            Player Two
-                                            <button
-                                              className="glyphicon glyphicon-remove"
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="danger"
+                                              disabled={false}
                                               onClick={[Function]}
-                                            />
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-danger"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                -
+                                              </button>
+                                            </Button>
+                                            <span
+                                              className="player-score"
+                                            >
+                                              35
+                                            </span>
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="success"
+                                              disabled={false}
+                                              onClick={[Function]}
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-success"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                +
+                                              </button>
+                                            </Button>
                                           </div>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="player-counter"
-                                        componentClass="div"
-                                        xs={3}
-                                      >
-                                        <div
-                                          className="player-counter col-xs-3"
-                                        >
-                                          <Counter
-                                            id="2"
-                                            score={35}
-                                            updateScore={[Function]}
-                                          >
-                                            <div>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="danger"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-danger"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  -
-                                                </button>
-                                              </Button>
-                                              <span
-                                                className="player-score"
-                                              >
-                                                35
-                                              </span>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="success"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-success"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  +
-                                                </button>
-                                              </Button>
-                                            </div>
-                                          </Counter>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="horizonal-rule"
-                                        componentClass="div"
-                                        md={12}
-                                      >
-                                        <div
-                                          className="horizonal-rule col-md-12"
-                                        />
-                                      </Col>
-                                    </div>
-                                  </Row>
-                                </Player>
-                              </Transition>
-                            </CSSTransition>
-                            <CSSTransition
-                              classNames="fade"
-                              in={true}
-                              key=".$3"
-                              onExited={[Function]}
-                              timeout={500}
-                            >
-                              <Transition
-                                appear={false}
-                                enter={true}
-                                exit={true}
-                                in={true}
-                                mountOnEnter={false}
-                                onEnter={[Function]}
-                                onEntered={[Function]}
-                                onEntering={[Function]}
-                                onExit={[Function]}
-                                onExited={[Function]}
-                                onExiting={[Function]}
-                                timeout={500}
-                                unmountOnExit={false}
-                              >
-                                <Player
-                                  deletePlayer={[Function]}
-                                  id="3"
-                                  key="3"
-                                  name="Player Three"
-                                  score={42}
-                                  updateScore={[Function]}
-                                >
-                                  <Row
-                                    bsClass="row"
-                                    componentClass="div"
-                                  >
-                                    <div
-                                      className="row"
+                                        </Counter>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="horizonal-rule"
+                                      componentClass="div"
+                                      md={12}
                                     >
-                                      <Col
-                                        bsClass="col"
-                                        className="player-name"
-                                        componentClass="div"
-                                        xs={9}
+                                      <div
+                                        className="horizonal-rule col-md-12"
+                                      />
+                                    </Col>
+                                  </div>
+                                </Row>
+                              </Player>
+                            </Transition>
+                          </CSSTransition>
+                          <CSSTransition
+                            classNames="fade"
+                            in={true}
+                            key=".$3"
+                            onExited={[Function]}
+                            timeout={500}
+                          >
+                            <Transition
+                              appear={false}
+                              enter={true}
+                              exit={true}
+                              in={true}
+                              mountOnEnter={false}
+                              onEnter={[Function]}
+                              onEntered={[Function]}
+                              onEntering={[Function]}
+                              onExit={[Function]}
+                              onExited={[Function]}
+                              onExiting={[Function]}
+                              timeout={500}
+                              unmountOnExit={false}
+                            >
+                              <Player
+                                deletePlayer={[Function]}
+                                id="3"
+                                key="3"
+                                name="Player Three"
+                                score={42}
+                                updateScore={[Function]}
+                              >
+                                <Row
+                                  bsClass="row"
+                                  componentClass="div"
+                                >
+                                  <div
+                                    className="row"
+                                  >
+                                    <Col
+                                      bsClass="col"
+                                      className="player-name"
+                                      componentClass="div"
+                                      xs={9}
+                                    >
+                                      <div
+                                        className="player-name col-xs-9"
                                       >
-                                        <div
-                                          className="player-name col-xs-9"
+                                        <div>
+                                          Player Three
+                                          <button
+                                            className="glyphicon glyphicon-remove"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="player-counter"
+                                      componentClass="div"
+                                      xs={3}
+                                    >
+                                      <div
+                                        className="player-counter col-xs-3"
+                                      >
+                                        <Counter
+                                          id="3"
+                                          score={42}
+                                          updateScore={[Function]}
                                         >
                                           <div>
-                                            Player Three
-                                            <button
-                                              className="glyphicon glyphicon-remove"
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="danger"
+                                              disabled={false}
                                               onClick={[Function]}
-                                            />
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-danger"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                -
+                                              </button>
+                                            </Button>
+                                            <span
+                                              className="player-score"
+                                            >
+                                              42
+                                            </span>
+                                            <Button
+                                              active={false}
+                                              block={false}
+                                              bsClass="btn"
+                                              bsSize="large"
+                                              bsStyle="success"
+                                              disabled={false}
+                                              onClick={[Function]}
+                                            >
+                                              <button
+                                                className="btn btn-lg btn-success"
+                                                disabled={false}
+                                                onClick={[Function]}
+                                                type="button"
+                                              >
+                                                +
+                                              </button>
+                                            </Button>
                                           </div>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="player-counter"
-                                        componentClass="div"
-                                        xs={3}
-                                      >
-                                        <div
-                                          className="player-counter col-xs-3"
-                                        >
-                                          <Counter
-                                            id="3"
-                                            score={42}
-                                            updateScore={[Function]}
-                                          >
-                                            <div>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="danger"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-danger"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  -
-                                                </button>
-                                              </Button>
-                                              <span
-                                                className="player-score"
-                                              >
-                                                42
-                                              </span>
-                                              <Button
-                                                active={false}
-                                                block={false}
-                                                bsClass="btn"
-                                                bsSize="large"
-                                                bsStyle="success"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                              >
-                                                <button
-                                                  className="btn btn-lg btn-success"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
-                                                >
-                                                  +
-                                                </button>
-                                              </Button>
-                                            </div>
-                                          </Counter>
-                                        </div>
-                                      </Col>
-                                      <Col
-                                        bsClass="col"
-                                        className="horizonal-rule"
-                                        componentClass="div"
-                                        md={12}
-                                      >
-                                        <div
-                                          className="horizonal-rule col-md-12"
-                                        />
-                                      </Col>
-                                    </div>
-                                  </Row>
-                                </Player>
-                              </Transition>
-                            </CSSTransition>
-                          </div>
-                        </TransitionGroup>
-                      </div>
-                    </PlayerList>
-                  </Connect(PlayerList)>
+                                        </Counter>
+                                      </div>
+                                    </Col>
+                                    <Col
+                                      bsClass="col"
+                                      className="horizonal-rule"
+                                      componentClass="div"
+                                      md={12}
+                                    >
+                                      <div
+                                        className="horizonal-rule col-md-12"
+                                      />
+                                    </Col>
+                                  </div>
+                                </Row>
+                              </Player>
+                            </Transition>
+                          </CSSTransition>
+                        </div>
+                      </TransitionGroup>
+                    </Component>
+                  </Connect(Component)>
                 </div>
               </Col>
             </div>
