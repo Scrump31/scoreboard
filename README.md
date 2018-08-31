@@ -10,7 +10,7 @@ Note: Redux was not necessary to build this application. I simply wanted to lear
 
 The Scoreboard application utilizies the following packages:
 
-- [Create React App](https://github.com/facebookincubator/create-react-app).
+- [Create React App](https://github.com/facebookincubator/create-react-app)
 
 - [Redux](http://redux.js.org/)
 
