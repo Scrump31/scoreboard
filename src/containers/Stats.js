@@ -11,13 +11,13 @@ const Stats = ({ players }) => (
         <td>
           <strong>Players:</strong>
         </td>
-        <td>{players.length}</td>
+        <td id="total_players">{players.length}</td>
       </tr>
       <tr>
         <td>
           <strong>Total Points:</strong>
         </td>
-        <td>{_.sumBy(players, 'score')}</td>
+        <td id="total_score">{_.sumBy(players, 'score')}</td>
       </tr>
     </tbody>
   </Table>
