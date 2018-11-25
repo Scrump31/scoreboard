@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> renders without crashing 1`] = `
+exports[`<App /> renders correctly 1`] = `
 <Component>
   <Provider
     store={
@@ -84,7 +84,9 @@ exports[`<App /> renders without crashing 1`] = `
                                   Players:
                                 </strong>
                               </td>
-                              <td>
+                              <td
+                                id="total_players"
+                              >
                                 3
                               </td>
                             </tr>
@@ -94,7 +96,9 @@ exports[`<App /> renders without crashing 1`] = `
                                   Total Points:
                                 </strong>
                               </td>
-                              <td>
+                              <td
+                                id="total_score"
+                              >
                                 108
                               </td>
                             </tr>

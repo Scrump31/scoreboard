@@ -4,7 +4,7 @@ import Root from '../Root';
 import App from './App';
 
 describe('<App />', () => {
-  it('renders without crashing', () => {
+  it('renders correctly', () => {
     const component = mount(
       <Root>
         <App />

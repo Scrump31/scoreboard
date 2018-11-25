@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import Timer from './Timer';
 
 describe('<Timer />', () => {
-  it('renders without crashing', () => {
+  it('renders correctly', () => {
     const component = shallow(<Timer />);
     expect(component).toMatchSnapshot();
   });
