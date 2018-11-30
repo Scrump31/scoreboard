@@ -2,12 +2,7 @@ const puppeteer = require('puppeteer');
 // const devices = require('puppeteer/DeviceDescriptors');
 // const iPhone8Plus = devices['iPhone 8 Plus'];
 
-const {
-  addPlayerInput,
-  addBtn,
-  totalPlayers,
-  scoreboardTitle,
-} = require('./selectors/selectors');
+const selectors = require('./selectors/selectors');
 
 const scoreboard = {
   browser: {},
@@ -24,25 +19,31 @@ const scoreboard = {
   },
 
   async getScoreboardTitle() {
-    const title = await this.page.$eval(scoreboardTitle, el => el.innerHTML);
+    const title = await this.page.$eval(
+      selectors.scoreboardTitle,
+      el => el.innerHTML,
+    );
     return title;
   },
 
   async getTotalPlayers() {
-    await this.page.waitForSelector(totalPlayers);
-    const players = await this.page.$eval(totalPlayers, el => el.innerHTML);
+    await this.page.waitForSelector(selectors.totalPlayers);
+    const players = await this.page.$eval(
+      selectors.totalPlayers,
+      el => el.innerHTML,
+    );
 
     return players;
   },
 
   async addNewPlayer(player = 'Test Player') {
-    await this.page.waitForSelector(addPlayerInput);
-    await this.page.click(addPlayerInput);
+    await this.page.waitForSelector(selectors.addPlayerInput);
+    await this.page.click(selectors.addPlayerInput);
 
-    await this.page.type(addPlayerInput, player);
+    await this.page.type(selectors.addPlayerInput, player);
 
-    await this.page.waitForSelector(addBtn);
-    await this.page.click(addBtn);
+    await this.page.waitForSelector(selectors.addBtn);
+    await this.page.click(selectors.addBtn);
   },
 };
 
