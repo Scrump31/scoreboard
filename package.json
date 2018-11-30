@@ -5,7 +5,8 @@
   "homepage": "https://scrump31.github.io/scoreboard/",
   "devDependencies": {
     "gh-pages": "^1.0.0",
-    "react-scripts": "1.1.4"
+    "puppeteer": "^1.10.0",
+    "react-scripts": "2.1.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -26,6 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:integration": "jest src/integration --config src/integration/jest.config.js",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -34,5 +36,11 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
