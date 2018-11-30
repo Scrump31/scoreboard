@@ -1,9 +1,6 @@
 const scoreboard = require('./scoreboard');
 
-beforeEach(async () => {
-  await scoreboard.loadApp(false, 100);
-});
-
+beforeEach(async () => await scoreboard.loadApp(false, 100));
 afterEach(async () => await scoreboard.closeBrowser());
 
 test('Verify title is "Scoreboard"', async () => {
