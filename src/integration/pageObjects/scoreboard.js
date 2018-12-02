@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 // const devices = require('puppeteer/DeviceDescriptors');
 // const iPhone8Plus = devices['iPhone 8 Plus'];
 
-const selectors = require('./selectors/selectors');
+const selectors = require('../selectors/selectors');
 
 const scoreboard = {
   browser: {},
@@ -35,6 +35,15 @@ const scoreboard = {
 
     return players;
   },
+  async getTotalPoints() {
+    await this.page.waitForSelector(selectors.totalPoints);
+    const points = await this.page.$eval(
+      selectors.totalPoints,
+      el => el.innerHTML,
+    );
+
+    return points;
+  },
 
   async addNewPlayer(player = 'Test Player') {
     await this.page.waitForSelector(selectors.addPlayerInput);
@@ -45,6 +54,23 @@ const scoreboard = {
     await this.page.waitForSelector(selectors.addBtn);
     await this.page.click(selectors.addBtn);
   },
+
+  async getPlayer1Score() {
+    const score = await this.page.$eval(
+      selectors.player1Score,
+      el => el.innerHTML,
+    );
+    return score;
+  },
+
+  async add2Player1Score() {
+    await this.page.waitForSelector(selectors.player1AddBtn);
+    await this.page.click(selectors.player1AddBtn);
+  },
 };
 
 module.exports = scoreboard;
+
+// await this.page.screenshot({
+//   path: './src/integration/test-screenshot.png',
+// });
