@@ -63,11 +63,6 @@ const scoreboard = {
     await this.page.waitForSelector(selectors.player1SubstractBtn);
     await this.page.click(selectors.player1SubstractBtn);
   },
-
-  // async startTimer() {},
-  // async pauseTimer() {},
-  // async stopTimer() {},
-  // async getTime() {},
 };
 
 module.exports = scoreboard;
