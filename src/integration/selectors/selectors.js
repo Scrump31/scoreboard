@@ -7,8 +7,4 @@ module.exports = {
   player1AddBtn: '.row:nth-of-type(1) .btn-lg.btn-success',
   player1SubstractBtn: '.row:nth-of-type(1) .btn-lg.btn-danger',
   player1Score: '.row:nth-of-type(1) .player-score',
-  timerStart: '.start',
-  timerPause: '.pause',
-  timerStop: '.stop',
-  timerTime: '.time',
 };
