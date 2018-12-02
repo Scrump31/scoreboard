@@ -18,14 +18,6 @@ const scoreboard = {
     await this.browser.close();
   },
 
-  async getScoreboardTitle() {
-    const title = await this.page.$eval(
-      selectors.scoreboardTitle,
-      el => el.innerHTML,
-    );
-    return title;
-  },
-
   async getTotalPlayers() {
     await this.page.waitForSelector(selectors.totalPlayers);
     const players = await this.page.$eval(
@@ -67,6 +59,15 @@ const scoreboard = {
     await this.page.waitForSelector(selectors.player1AddBtn);
     await this.page.click(selectors.player1AddBtn);
   },
+  async subtractPlayer1Score() {
+    await this.page.waitForSelector(selectors.player1SubstractBtn);
+    await this.page.click(selectors.player1SubstractBtn);
+  },
+
+  // async startTimer() {},
+  // async pauseTimer() {},
+  // async stopTimer() {},
+  // async getTime() {},
 };
 
 module.exports = scoreboard;
