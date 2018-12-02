@@ -1,4 +1,4 @@
 module.exports = {
   setupTestFrameworkScriptFile: './config/jest.setup.js',
-  testRegex: './*\\.feature\\.js$',
+  testRegex: './*\\.steps\\.js$',
 };
