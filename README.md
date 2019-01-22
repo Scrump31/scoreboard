@@ -36,6 +36,14 @@ Then, open [http://localhost:3000/](http://localhost:3000/) to view the applicat
 
 # Testing
 
-`npm test` or `yarn test`
+## Unit Tests
 
 The application is tested using [Jest](https://jestjs.io/en/) and [Enzyme](http://airbnb.io/enzyme/). Jest is already included with create-react-app, so Enzyme was installed as an additional package. Components are tested with the `shallow()` and `mount()` methods from Enzyme. Jest [Snapshots](https://jestjs.io/docs/en/snapshot-testing) are also used to test components.
+
+`npm test` or `yarn test`
+
+## UI Tests
+
+Automated User Interface tests were created using [Puppeteer](https://pptr.dev/) and [Jest-Cucumber](https://github.com/bencompton/jest-cucumber).
+
+`npm run test:integration` or `yarn test:integration`
